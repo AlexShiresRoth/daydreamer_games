@@ -3,6 +3,7 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "daydreamer_games",
   },
+   
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
@@ -22,6 +23,15 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    `gatsby-plugin-typescript`,
+     {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        jsxPragma: `jsx`, // defaults to "React"
+        allExtensions: true, // defaults to false
+      },
     },
   ],
 };
